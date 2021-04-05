@@ -9,7 +9,7 @@
     syncState(picture) {
         if (this.picture == picture) return;
         this.picture = picture;
-        drawPicture(this.picture, this.dom, scale);
+        drawPicture(this.picture, this.dom, SCALE);
     }
 }
 
@@ -34,8 +34,8 @@ PictureCanvas.prototype.mouse = function (downEvent, onDown) {
 function pointerPosition(pos, domNode) {
     let rect = domNode.getBoundingClientRect();
     return {
-        x: Math.floor((pos.clientX - rect.left) / scale),
-        y: Math.floor((pos.clientY - rect.top) / scale)
+        x: Math.floor((pos.clientX - rect.left) / SCALE),
+        y: Math.floor((pos.clientY - rect.top) / SCALE)
     };
 }
 
@@ -64,7 +64,7 @@ PictureCanvas.prototype.touch = function (startEvent,
 PictureCanvas.prototype.syncState = function (picture) {
     if (this.picture == picture) return;
     this.picture = picture;
-    drawPicture(this.picture, this.dom, scale);
+    drawPicture(this.picture, this.dom, SCALE);
 };
 
 // You may want to use or change this as well

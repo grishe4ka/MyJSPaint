@@ -1,5 +1,5 @@
 ﻿
-const scale = 10;
+const SCALE = 10;
 
 function historyUpdateState(state, action) {
     if (action.undo == true) {
